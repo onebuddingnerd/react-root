@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.073c9b0a.css",
-    "main.js": "/react-gh-pages/static/js/main.5333a2eb.js",
-    "static/js/787.a4dad81d.chunk.js": "/react-gh-pages/static/js/787.a4dad81d.chunk.js",
-    "static/media/CV_online.pdf": "/react-gh-pages/static/media/CV_online.6d9c1f8d1bfdeee590b7.pdf",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.073c9b0a.css.map": "/react-gh-pages/static/css/main.073c9b0a.css.map",
-    "main.5333a2eb.js.map": "/react-gh-pages/static/js/main.5333a2eb.js.map",
-    "787.a4dad81d.chunk.js.map": "/react-gh-pages/static/js/787.a4dad81d.chunk.js.map"
+    "main.css": "/react-root/static/css/main.073c9b0a.css",
+    "main.js": "/react-root/static/js/main.37300a32.js",
+    "static/js/787.a4dad81d.chunk.js": "/react-root/static/js/787.a4dad81d.chunk.js",
+    "static/media/CV_online.pdf": "/react-root/static/media/CV_online.6d9c1f8d1bfdeee590b7.pdf",
+    "static/media/logo.svg": "/react-root/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react-root/index.html",
+    "main.073c9b0a.css.map": "/react-root/static/css/main.073c9b0a.css.map",
+    "main.37300a32.js.map": "/react-root/static/js/main.37300a32.js.map",
+    "787.a4dad81d.chunk.js.map": "/react-root/static/js/787.a4dad81d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.5333a2eb.js"
+    "static/js/main.37300a32.js"
   ]
 }

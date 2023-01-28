@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react-root/static/css/main.073c9b0a.css",
-    "main.js": "/react-root/static/js/main.37300a32.js",
+    "main.css": "/react-root/static/css/main.195d93a5.css",
+    "main.js": "/react-root/static/js/main.506d6b88.js",
     "static/js/787.a4dad81d.chunk.js": "/react-root/static/js/787.a4dad81d.chunk.js",
+    "static/media/possibleprofile_nocrop.jpeg": "/react-root/static/media/possibleprofile_nocrop.88df1209f40e57c01935.jpeg",
     "static/media/CV_online.pdf": "/react-root/static/media/CV_online.6d9c1f8d1bfdeee590b7.pdf",
     "static/media/logo.svg": "/react-root/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-root/index.html",
-    "main.073c9b0a.css.map": "/react-root/static/css/main.073c9b0a.css.map",
-    "main.37300a32.js.map": "/react-root/static/js/main.37300a32.js.map",
+    "main.195d93a5.css.map": "/react-root/static/css/main.195d93a5.css.map",
+    "main.506d6b88.js.map": "/react-root/static/js/main.506d6b88.js.map",
     "787.a4dad81d.chunk.js.map": "/react-root/static/js/787.a4dad81d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.37300a32.js"
+    "static/css/main.195d93a5.css",
+    "static/js/main.506d6b88.js"
   ]
 }

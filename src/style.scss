@@ -1,0 +1,23 @@
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 850px,
+    md: 851px,
+    lg: 852px,
+    xl: 1200px,
+    xxl: 1900px
+);
+
+$container-max-widths: (
+    sm: 850px,
+    md: 851px,
+    lg: 852px,
+    xl: 1200px,
+    xxl: 1900px
+);
+

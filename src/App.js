@@ -8,8 +8,27 @@ import myphoto from "./imgdata/possibleprofile_nocrop.jpeg"
 // import { Divider } from 'rsuite';
 
 import ClassDescDiv from './ClassDescDiv';
+import ProjectDescDiv from './ProjectDescDiv'
 
 import './bootstrap-custom.scss';
+
+const divCss = `
+div.scroll {
+  background-color: 0;
+  height: min(100%, 530px);
+  overflow: auto;
+  padding: 10px;
+}
+`
+
+const divCssContainer = `
+div.scrollContainer {
+  background-color: 0;
+  height: min(100%, 550px)
+  overflow: auto;
+  padding: 10px;
+}
+`
 
 function App() {
   
@@ -80,38 +99,39 @@ function App() {
         <center> <hr class="rounded" width="90%" /> </center>
         <h3> <center> More about my Education </center> </h3>
         <center><h5>A selection of my most memorable undergrad coursework:</h5> </center>
-        <div class="container">
-          <br/>
-          <div class="row" height="100%">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-              <ClassDescDiv Name="15-441: Networking and the Internet" 
-              Desc="15-441 provided thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust connectivity among data dispersed data, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and delved into the inner workings of each layer of the OSI model. Projects demanded rigorous low-level analysis in replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.)." 
-              Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest respective qualities transmissible without delays, as calculated by real-time observations of network throughput. The project also pre-required use of an HTTP parser, coded nearly from-scratch earlier in the course, to fully control the processing of requests and responses." />
-            </div>
+        <div class="scrollContainer">
+          <style>{divCssContainer}</style>
+          <div class="container" style={{"height": "100%"}}>
+            <br/>
+            <div class="row" height="100%">
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <ClassDescDiv Name="15-441: Networking and the Internet" 
+                Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques." 
+                Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP parser, coded nearly from-scratch earlier in the course, to fully control the processing of requests and responses." />
+              </div>
 
-            <div class="col-lg-4 col-md-12 col-sm-12">
-              <ClassDescDiv Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
-              Desc="15-210's curriculum chiefly involved in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems." 
-              Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling downsizing across either the vertical or horizontal dimension with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot; in an image." />
-            </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <ClassDescDiv Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
+                Desc="15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as there's never a shortage of students advertising the course's slogan &quot;functions are values&quot; on the Carnegie Mellon campus!" 
+                Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image." />
+              </div>
 
-            <div class="col-lg-4 col-md-12 col-sm-12">
-              <ClassDescDiv Name="10-301: Introduction to Machine Learning" 
-              Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron and gradually accumulating intuitions and concepts to impart to students a thorough understanding of complex neural networks (and how to optimize implementations for compute-efficiency). Course content then transitioned to nuances of sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning." 
-              Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a convolutional model) by way of successive MLE--which I had learned about in prior classes--operations. Additionally, it was intellectually enriching to deploy some of the insights in devising an optimal subproblem structure that I had learned in 15-210's lessons in dynamic programming." />
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <ClassDescDiv Name="10-301: Introduction to Machine Learning" 
+                Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with the mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
+                Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the project's code." />
+              </div>
             </div>
-
+            </div>
           </div>
-        </div>
         <br></br>
 
         <center> <hr class="rounded" width="90%" /> </center>
-        <h3> <center> Projects </center> </h3>
+        <h3> <center> Self-Directed Projects </center> </h3>
         <br></br>
         <center><b><i></i></b> </center>
         <div class="container">
-          <div class="row" height="100%">
-          </div>
+          <ProjectDescDiv/>
         </div>
         <br></br>
 

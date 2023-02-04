@@ -40,6 +40,15 @@
   vertical-align: middle; 
 }
 
+button.toggle {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
 img {
   width: min( max(95%, 100px), 275px);
 }

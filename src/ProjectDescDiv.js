@@ -10,6 +10,7 @@ export default class ClassDescDiv extends React.Component {
     }
 
     toggleExposureIcon = () => {
+        console.log('hi from toggler - project')
         const newIcon = this.state.DescriptionExposureIcon === '▼' ? '▲' : '▼'
         this.setState({
             DescriptionExposureIcon: newIcon

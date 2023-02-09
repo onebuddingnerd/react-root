@@ -87,8 +87,8 @@ function App() {
 
                 <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's Cloud CLI.</p>
 
-                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <ul> <li> Playing table tennis </li>
-                      <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), and neuroscience (esp. BCI)</li>
+                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <ul> <li> Playing table tennis xor hiking -- kinda alternates in phases </li>
+                      <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, and new consumer tech</li>
                       <li> Dancing and choreographing </li>
                     </ul> </p>
               </div>
@@ -107,12 +107,12 @@ function App() {
               <div class="col-lg-4 col-md-12 col-sm-12">
                 <ClassDescDiv Name="15-441: Networking and the Internet" 
                 Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques." 
-                Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP parser, coded nearly from-scratch earlier in the course, to fully control the processing of requests and responses." />
+                Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP request handler with a parser, coded nearly from-scratch earlier in the course, to better control the exact pre-/post-conditions surrounding redirections to the proxy." />
               </div>
 
               <div class="col-lg-4 col-md-12 col-sm-12">
                 <ClassDescDiv Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
-                Desc="15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as there's never a shortage of students advertising the course's slogan &quot;functions are values&quot; on the Carnegie Mellon campus!" 
+                Desc={["15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as the course lectures steadfastly uphold the mantra that \"functions are values\" (check out the", <a href='http://www.cs.cmu.edu/~15150/faq.html'> bottom FAQ item</a>, ", xD) and convince students about the conceptual elegance of that central idea."]} 
                 Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image." />
               </div>
 
@@ -130,9 +130,9 @@ function App() {
         <h3> <center> Self-Directed Projects </center> </h3>
         <br></br>
         <center><b><i></i></b> </center>
-        <div class="container">
+        {/* <div class="container">
           <ProjectDescDiv/>
-        </div>
+        </div> */}
         <br></br>
 
         <center>

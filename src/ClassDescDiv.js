@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import Collapsible from 'react-collapsible';
 
 const divCss = `
 div.scroll {
@@ -25,29 +26,28 @@ div.divCourseTitle {
 }
 `
 
+const myTriggerStyle = {
+    text: "bold",
+}
+
 export default class ClassDescDiv extends React.Component {
 
     state = {
-        ModeDescription: 'Hidden',
         DescriptionToggleIcon: '▼',
-        ModeProject: 'NotHidden',
-        ProjectToggleIcon: '▲'
+        ProjectToggleIcon: '▼'
     }
     
-    toggleDescription = (val, toggleVal) => {
-        const newValue = val === 'Hidden' ? 'NotHidden' : 'Hidden'
-        const newToggleValue = toggleVal === '▼' ? '▲' : '▼'
+    toggleDescription = () => {
+        // console.log('hi from toggler')
+        const newToggleValue = this.state.DescriptionToggleIcon === '▼' ? '▲' : '▼'
         this.setState({
-            ModeDescription: newValue,
             DescriptionToggleIcon: newToggleValue
         });
     }
 
-    toggleProject = (val, toggleVal) => {
-        const newValue = val === 'Hidden' ? 'NotHidden' : 'Hidden'
-        const newToggleValue = toggleVal === '▼' ? '▲' : '▼'
+    toggleProject = () => {
+        const newToggleValue = this.state.ProjectToggleIcon === '▼' ? '▲' : '▼'
         this.setState({
-            ModeProject: newValue,
             ProjectToggleIcon: newToggleValue
         })
     }
@@ -62,24 +62,27 @@ export default class ClassDescDiv extends React.Component {
                         <center><p> <b> {this.props.Name} </b> </p>  </center>
                     </div>
 
-                    <span style={{display: "inline"}}>
+                    {/* <span style={{display: "inline"}}>
                         <p> <b>Why I liked it:</b> <button class="toggle" onClick={ () => this.toggleDescription(this.state.ModeDescription, this.state.DescriptionToggleIcon) }> {this.state.DescriptionToggleIcon} </button> </p>
-                    </span>
-                    { this.state.ModeDescription === "Hidden" ? 
-                        <p></p> 
-                    :
-                        <p> {this.props.Desc} <br/> </p>
-                        
-                    }
+                    </span> */}
+                    <Collapsible trigger={'Why I liked it: ' + this.state.DescriptionToggleIcon} triggerStyle={{"font-weight":"bold"}}
+                                    onOpen={this.toggleDescription}
+                                    onClose={this.toggleDescription}
+                                    >
+                        <p> {this.props.Desc} </p>
+                    </Collapsible>
+                    {this.DescriptionToggleIcon === '▼' ? <br/> : <p></p>}
                     
-                    <span style={{display: "inline"}}>
+                    {/* <span style={{display: "inline"}}>
                         <p><b>My favorite project...</b> <button class="toggle" onClick={ () => this.toggleProject(this.state.ModeProject, this.state.ProjectToggleIcon) }> {this.state.ProjectToggleIcon} </button> </p>
-                    </span>
-                    { this.state.ModeProject === "Hidden" ? 
-                        <p></p> 
-                    :
-                        <p> {this.props.Project} <br/> </p>
-                    }
+                    </span> */}
+                    <Collapsible open={true} trigger={'My favorite project... ' + this.state.ProjectToggleIcon} triggerStyle={{"font-weight":"bold"}}
+                                    onOpen={this.toggleProject}
+                                    onClose={this.toggleProject}
+                                    >
+                        <p> {this.props.Project} </p>
+                    </Collapsible>
+                    <br/>
             </div>
         )
     }

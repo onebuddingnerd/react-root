@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 import UncontrolledExample from './Carousel';
+import CardDiv from './CardDiv'
 
 
 export default class ClassDescDiv extends React.Component {

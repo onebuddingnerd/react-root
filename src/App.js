@@ -11,25 +11,10 @@ import ClassDescDiv from './ClassDescDiv';
 import ClassDesc from './ClassDesc'
 import ProjectDescDiv from './ProjectDescDiv'
 
-import './bootstrap-custom.scss';
+import CardDiv from './CardDiv'
+import { textAlign } from '@mui/system';
 
-const divCss = `
-div.scroll {
-  background-color: 0;
-  height: min(100%, 530px);
-  overflow: auto;
-  padding: 10px;
-}
-`
 
-const divCssContainer = `
-div.scrollContainer {
-  background-color: 0;
-  height: min(100%, 550px)
-  overflow: auto;
-  padding: 10px;
-}
-`
 
 function App() {
   
@@ -98,36 +83,60 @@ function App() {
         </div>
 
         <center> <hr class="rounded" width="90%" /> </center>
-        <h3> <center> A few recent projects </center> </h3>
+        <h3> <center> Some recent projects </center> </h3>
         <br></br>
-        <center><b><i></i></b> </center>
-        <div class="container">
-          <ProjectDescDiv triggerText="Parallelization of Inference on Recurrent Neural Networks" 
-                          shortSentence="Research on implementation decisions that optimally negotiate the competing priorities of speed and accuracy in GPU-accelerated, parallelized speedups of the forward-pass of recurrent neural networks--a process that typically requires purely sequential execution layout for full correctness."
-                          whenContent="Dec. 2021" 
-                          implementedInContent="Bash, C++, CUDA, R" 
-                          linksContent="Source code (Github), Research showcase (Github Pages)"
-                          />
-            <ProjectDescDiv triggerText="GGG: Gamified Grocery Guessing" 
-                          shortSentence="A GUI, with support for multiple profiles accessed by face-based authentication, that generates advice on (and offers gesture-based triggering of automated followup actions for) food purchases, informed by outputs from a custom-architected/-hyperparametrized model (a simple 3-layer linear transform) trained on a public dataset of millions of transactions at Aldi." 
-                          whenContent="Feb. 2021" 
-                          implementedInContent="Python, Bash"
-                          linksContent="Source code (Github), Technical Summary (Github)"
-                          />
-            <ProjectDescDiv triggerText="Nutr-EZ Nutrition Aid"
-                          shortSentence="A webapp catering to students interested in pursuing optimal on-campus venues/offerings for their dietary parameters and fitness goals, featuring adaptive content aiming to best combine profile-specific details, user feedback, and data gathered by a bootstrapped apparatus for querying the college's dining webpages."
-                          whenContent="Sept. 2020"
-                          implementedInContent="Python"
-                          linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)"
-            />
+        
+
+        <div class="scrollContainer" style={{"height": "100%"}}>
+            
+            <div class = "container" style={{"height": "100%"}}>
+            <div class="row" height="100%">
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <CardDiv ProjectName="Parallelization of Inference on Recurrent Neural Networks" 
+                      ProjectDesc="Research on implementation decisions that optimally negotiate the competing priorities of speed and accuracy in GPU-accelerated, parallelized speedups of the forward-pass of recurrent neural networks--a process that typically requires purely sequential execution layout for full correctness." 
+                      linksContent="Source code (Github), Research showcase (Github Pages)" 
+                      flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Nov. - Dec. 2021</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • C++, CUDA, Bash, R</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
+                      • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}> Research Showcase</a> on Github Pages</p>]}
+                      />
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <CardDiv ProjectName="GGG: Gamified Grocery Guessing" ProjectDesc="A GUI, with support for multiple profiles accessed by face-based authentication, that generates advice on (and offers gesture-based triggering of automated followup actions for) food purchases, informed by outputs from a custom-architected/-hyperparametrized model (a simple 3-layer linear transform) trained on a public dataset of millions of transactions at Aldi."
+                linksContent="Source code (Github), Technical Summary (Github)"
+                flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Feb. 2021</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • Python, Bash</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/coolimagetech" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
+                      • <a href="https://github.com/onebuddingnerd/coolimagetech/blob/main/README.md" style={{color: 'purple'}}> Project Description and Usage</a></p>]}
+                />
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <CardDiv ProjectName="Nutr-EZ Nutrition Aid" ProjectDesc="A webapp catering to students interested in pursuing optimal on-campus venues/offerings for their dietary parameters and fitness goals, featuring adaptive content aiming to best combine profile-specific details, user feedback, and data gathered by a bootstrapped apparatus for querying the college's dining webpages."
+                linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
+                flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
+                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo</a> on Devpost</p>]}
+                / >
+              </div>
+              </div>
+            </div>
         </div>
-        <br></br>
 
         <center> <hr class="rounded" width="90%" /> </center>
         <h3> <center> More about my Education </center> </h3>
         <center><h5>A selection of my most memorable undergrad coursework:</h5> </center>
         <div class="scrollContainer">
-          <style>{divCssContainer}</style>
+          {/* <style>{divCssContainer}</style> */}
           <div class="container" style={{"height": "100%"}}>
             <br/>
             <div class="row" height="100%">

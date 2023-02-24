@@ -88,12 +88,12 @@ export default class ClassDescDiv extends React.Component {
                             <style>{divCourseTitle}</style>   
                             <center><p><b>{this.props.Name}</b> </p>  </center>
                         </div>
-                        <b>• Why I liked it:</b> 
+                        <b>Why I liked it:</b> 
                         <ShowMoreText more='more' less='less'>
                             <p>{this.props.Desc}</p>
                         </ShowMoreText>
                         <br></br>
-                        <b>• My favorite project...</b> 
+                        <b>My favorite project...</b> 
                         <ShowMoreText more='more'  less='less'>
                             <p>{this.props.Project}</p>
                         </ShowMoreText>

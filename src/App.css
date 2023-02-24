@@ -53,6 +53,15 @@ img {
   width: min( max(95%, 100px), 275px);
 }
 
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#000000;
+  height: 1px;
+}
+
 .vertcenterdiv {
   display: flex;
   justify-content: center;

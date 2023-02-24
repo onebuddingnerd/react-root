@@ -2,6 +2,12 @@
 
 import * as React from 'react';
 import Collapsible from 'react-collapsible';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+
+import UncontrolledExample from './Carousel';
+
 
 export default class ClassDescDiv extends React.Component {
 
@@ -19,16 +25,26 @@ export default class ClassDescDiv extends React.Component {
     
     render() {
         return (
-            <Collapsible trigger={'Ok ' + this.state.DescriptionExposureIcon} onOpen={this.toggleExposureIcon} onClose={this.toggleExposureIcon} >
+            <div>
+            <Collapsible trigger={[ <div> <p><b>{this.props.triggerText}:</b> <br/> <i>{this.props.shortSentence}</i> {this.state.DescriptionExposureIcon}</p> </div> ]} 
+                    onOpen={this.toggleExposureIcon} onClose={this.toggleExposureIcon} 
+                    >
             <p>
-                This is the collapsible content. It can be any element or React
-                component you like.
-            </p>
-            <p>
-                It can even be another Collapsible component. Check out the next
-                section!
+                <Typography sx={{ fontSize: 15 }} color="text.secondary" gutterBottom>
+                <ul>
+                <li><b>When: </b> {this.props.whenContent}</li>
+                <li><b>Implemented in: </b> {this.props.implementedInContent}</li>
+                <li><b>Links:</b></li>
+                </ul>
+                </Typography>
             </p>
             </Collapsible>
+
+            {/* <div >
+                <UncontrolledExample/>
+            </div> */}
+
+            </div>
         );
     }
 

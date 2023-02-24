@@ -8,6 +8,7 @@ import myphoto from "./imgdata/possibleprofile_nocrop.jpeg"
 // import { Divider } from 'rsuite';
 
 import ClassDescDiv from './ClassDescDiv';
+import ClassDesc from './ClassDesc'
 import ProjectDescDiv from './ProjectDescDiv'
 
 import './bootstrap-custom.scss';
@@ -85,16 +86,42 @@ function App() {
 
                 <p> <b><i> Education: </i></b> I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University.</p>
 
-                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's Cloud CLI.</p>
+                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-release'>Cloud CLI.</a> </p>
 
                 <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <ul> <li> Playing table tennis xor hiking -- kinda alternates in phases </li>
-                      <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, and new consumer tech</li>
+                      <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech</li>
                       <li> Dancing and choreographing </li>
                     </ul> </p>
               </div>
             </div>
           </div>
         </div>
+
+        <center> <hr class="rounded" width="90%" /> </center>
+        <h3> <center> A few recent projects </center> </h3>
+        <br></br>
+        <center><b><i></i></b> </center>
+        <div class="container">
+          <ProjectDescDiv triggerText="Parallelization of Inference on Recurrent Neural Networks" 
+                          shortSentence="Research on implementation decisions that optimally negotiate the competing priorities of speed and accuracy in GPU-accelerated, parallelized speedups of the forward-pass of recurrent neural networks--a process that typically requires purely sequential execution layout for full correctness."
+                          whenContent="Dec. 2021" 
+                          implementedInContent="Bash, C++, CUDA, R" 
+                          linksContent="Source code (Github), Research showcase (Github Pages)"
+                          />
+            <ProjectDescDiv triggerText="GGG: Gamified Grocery Guessing" 
+                          shortSentence="A GUI, with support for multiple profiles accessed by face-based authentication, that generates advice on (and offers gesture-based triggering of automated followup actions for) food purchases, informed by outputs from a custom-architected/-hyperparametrized model (a simple 3-layer linear transform) trained on a public dataset of millions of transactions at Aldi." 
+                          whenContent="Feb. 2021" 
+                          implementedInContent="Python, Bash"
+                          linksContent="Source code (Github), Technical Summary (Github)"
+                          />
+            <ProjectDescDiv triggerText="Nutr-EZ Nutrition Aid"
+                          shortSentence="A webapp catering to students interested in pursuing optimal on-campus venues/offerings for their dietary parameters and fitness goals, featuring adaptive content aiming to best combine profile-specific details, user feedback, and data gathered by a bootstrapped apparatus for querying the college's dining webpages."
+                          whenContent="Sept. 2020"
+                          implementedInContent="Python"
+                          linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)"
+            />
+        </div>
+        <br></br>
 
         <center> <hr class="rounded" width="90%" /> </center>
         <h3> <center> More about my Education </center> </h3>
@@ -105,34 +132,25 @@ function App() {
             <br/>
             <div class="row" height="100%">
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDescDiv Name="15-441: Networking and the Internet" 
+                <ClassDesc Name="15-441: Networking and the Internet" 
                 Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques." 
                 Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP request handler with a parser, coded nearly from-scratch earlier in the course, to better control the exact pre-/post-conditions surrounding redirections to the proxy." />
               </div>
 
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDescDiv Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
+                <ClassDesc Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
                 Desc={["15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as the course lectures steadfastly uphold the mantra that \"functions are values\" (check out the", <a href='http://www.cs.cmu.edu/~15150/faq.html'> bottom FAQ item</a>, ", xD) and convince students about the conceptual elegance of that central idea."]} 
                 Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image." />
               </div>
 
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDescDiv Name="10-301: Introduction to Machine Learning" 
+                <ClassDesc Name="10-301: Introduction to Machine Learning" 
                 Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with the mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
-                Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the project's code." />
+                Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states." />
               </div>
             </div>
             </div>
           </div>
-        <br></br>
-
-        <center> <hr class="rounded" width="90%" /> </center>
-        <h3> <center> Self-Directed Projects </center> </h3>
-        <br></br>
-        <center><b><i></i></b> </center>
-        {/* <div class="container">
-          <ProjectDescDiv/>
-        </div> */}
         <br></br>
 
         <center>

@@ -57,7 +57,7 @@ export default class ClassDescDiv extends React.Component {
     render () {
 
         return (
-            <div > 
+            <div style={{borderStyle: 'solid', borderColor: '#008080', borderWidth: '3px', borderRadius: '13px', margin: '5px', perspective: '5px', padding: '13px'}} > 
                  <style>{divCss}</style>  
                  {/*  <div class="divCourseTitle">
                         <style>{divCourseTitle}</style>   
@@ -84,7 +84,7 @@ export default class ClassDescDiv extends React.Component {
                                     >
                         <p> {this.props.Project} </p>
                     </Collapsible> */}
-                        <div class="divCourseTitle">
+                        <div class="divCourseTitle" >
                             <style>{divCourseTitle}</style>   
                             <center><p><b>{this.props.Name}</b> </p>  </center>
                         </div>
@@ -93,7 +93,7 @@ export default class ClassDescDiv extends React.Component {
                             <p>{this.props.Desc}</p>
                         </ShowMoreText>
                         <br></br>
-                        <b>My favorite project...</b> 
+                        <b>My favorite course assignment...</b> 
                         <ShowMoreText more='more'  less='less'>
                             <p>{this.props.Project}</p>
                         </ShowMoreText>

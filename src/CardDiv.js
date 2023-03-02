@@ -18,16 +18,16 @@ export default class CardDiv extends React.Component {
             <ReactCardFlip isFlipped={this.state.isFlipped} 
                 flipDirection="vertical">
                 <div style={{
-                    perspective: '10px',
+                    perspective: '5px',
                     width: 'auto',
                     height: 'auto',
                     background: '#008080',
                     fontSize: '18px',
                     color: 'black',
-                    margin: '20px',
+                    margin: '13px',
                     borderRadius: '13px',
                     textAlign: 'center',
-                    padding: '20px'
+                    padding: '13px'
                 }}>
                     <b style={{color: "white"}}>{this.props.ProjectName}</b>
                     <br />

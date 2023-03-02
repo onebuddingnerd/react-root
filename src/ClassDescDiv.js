@@ -76,7 +76,7 @@ export default class ClassDescDiv extends React.Component {
                     {/* <span style={{display: "inline"}}>
                         <p><b>My favorite project...</b> <button class="toggle" onClick={ () => this.toggleProject(this.state.ModeProject, this.state.ProjectToggleIcon) }> {this.state.ProjectToggleIcon} </button> </p>
                     </span> */}
-                    <Collapsible open={true} trigger={'My favorite project... ' + this.state.ProjectToggleIcon} triggerStyle={{"font-weight":"bold"}}
+                    <Collapsible open={true} trigger={'My favorite course assignment... ' + this.state.ProjectToggleIcon} triggerStyle={{"font-weight":"bold"}}
                                     onOpen={this.toggleProject}
                                     onClose={this.toggleProject}
                                     >

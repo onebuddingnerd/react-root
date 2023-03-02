@@ -1,3 +1,8 @@
+@import url('bulma/css/bulma.css');
+@import url('material-design-icons/iconfont/material-icons.css');
+@import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+@import "react-pdf/dist/esm/Page/TextLayer.css";
+
 .App {
   text-align: center;
 }
@@ -31,6 +36,11 @@
   width: min(45vw, 513px);
 }
 
+.doc_centeralign {
+  display: flex;
+  justify-content: center;
+}
+
 .d-flex-soverflow {
   display : flex;
   align-items : center;
@@ -51,14 +61,6 @@ button.toggle {
 
 img {
   width: min( max(95%, 100px), 275px);
-}
-
-hr {
-  border-top: 10px double #000000;
-  display:block;
-  width: 90%;        
-  background-color:#000000;
-  height: 10px;
 }
 
 .vertcenterdiv {

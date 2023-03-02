@@ -14,6 +14,8 @@ import ProjectDescDiv from './ProjectDescDiv'
 import CardDiv from './CardDiv'
 import { textAlign } from '@mui/system';
 
+import PDFPane from './PDFPane';
+
 
 
 function App() {
@@ -43,7 +45,7 @@ function App() {
           "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           rel="stylesheet"/>
         <center> <h1>Hi, I'm Anup!</h1> 
-        <hr class="rounded" width="90%" /> 
+        <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} /> 
         </center>
         
          <h3> <center> A Quickstart on Me! </center> </h3>
@@ -73,16 +75,19 @@ function App() {
 
                 <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-release'>Cloud CLI.</a> </p>
 
-                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <ul> <li> Playing table tennis xor hiking -- kinda alternates in phases </li>
-                      <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech</li>
-                      <li> Dancing and choreographing </li>
-                    </ul> </p>
+                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> </p>
+                <ul> 
+                  <li> Playing table tennis xor hiking -- kinda alternates in phase </li>
+                  <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech </li>
+                  <li> Dancing and choreographing </li>
+                </ul> 
               </div>
             </div>
           </div>
         </div>
 
-        <center> <hr class="rounded" width="90%" /> </center>
+        <br/>
+        <center> <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} ></hr> </center>
         <h3> <center> Some recent projects </center> </h3>
         <br></br>
         
@@ -132,7 +137,9 @@ function App() {
             </div>
         </div>
 
-        <center> <hr class="rounded" width="90%" /> </center>
+        <br/>
+        <center> <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} /> </center>
+        
         <h3> <center> More about my Education </center> </h3>
         <center><h5>A selection of my most memorable undergrad coursework:</h5> </center>
         <div class="scrollContainer">
@@ -154,7 +161,7 @@ function App() {
 
               <div class="col-lg-4 col-md-12 col-sm-12">
                 <ClassDesc Name="10-301: Introduction to Machine Learning" 
-                Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with the mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
+                Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
                 Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states." />
               </div>
             </div>
@@ -163,7 +170,16 @@ function App() {
         <br></br>
 
         <center>
-        <hr class="rounded" width="90%" /> 
+        <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} />  
+        </center>
+
+        <h3> <center> My CV </center> </h3>
+        <center>
+        <PDFPane />
+        </center>
+
+        <center>
+        <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} />  
         <h2>
           <a href="https://onebuddingnerd.github.io/react-root"><img src={home_ico} style={{width:"auto"}} /></a> 
           <a href={require("./filesdata/CV_online.pdf")}> <img src={cv_ico} style={{width:"auto"}} /></a> 

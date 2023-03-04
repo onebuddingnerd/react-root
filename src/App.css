@@ -39,6 +39,13 @@
 .doc_centeralign {
   display: flex;
   justify-content: center;
+  overflow-x: auto;
+}
+
+.scrollable_cv_div {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .d-flex-soverflow {

@@ -73,7 +73,7 @@ function App() {
 
                 <p> <b><i> Education: </i></b> I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University.</p>
 
-                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-release'>Cloud CLI.</a> </p>
+                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> and its accompanying <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a>. </p>
 
                 <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> </p>
                 <ul> 
@@ -105,8 +105,8 @@ function App() {
                       <b style={{color:"white"}}>Implemented in:</b>,
                       <p style={{color:"white"}}> • C++, CUDA, Bash, R</p>,
                       <b style={{color:"white"}}>Links:</b>,
-                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
-                      • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}> Research Showcase</a> on Github Pages</p>]}
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}>Source Code</a> <br/> 
+                      • <a href="https://onebuddingnerd.github.io/418-react/" style={{color: 'purple'}}> Research Showcase</a> </p>]}
                       />
               </div>
               <div class="col-lg-4 col-md-12 col-sm-12">
@@ -117,7 +117,7 @@ function App() {
                       <b style={{color:"white"}}>Implemented in:</b>,
                       <p style={{color:"white"}}> • Python, Bash</p>,
                       <b style={{color:"white"}}>Links:</b>,
-                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/coolimagetech" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/coolimagetech" style={{color: 'purple'}}>Source Code</a> <br/> 
                       • <a href="https://github.com/onebuddingnerd/coolimagetech/blob/main/README.md" style={{color: 'purple'}}> Project Description and Usage</a></p>]}
                 />
               </div>
@@ -129,8 +129,8 @@ function App() {
                       <b style={{color:"white"}}>Implemented in:</b>,
                       <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
                       <b style={{color:"white"}}>Links:</b>,
-                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a> on Github  <br/> 
-                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo</a> on Devpost</p>]}
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
+                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
                 / >
               </div>
               </div>
@@ -173,7 +173,7 @@ function App() {
         <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} />  
         </center>
 
-        <h3> <center> My CV </center> </h3>
+        <h3> <center> My CV <a href={require('./CV_online.pdf')}> ↓ </a> </center> </h3>
         <center>
         <PDFPane />
         </center>

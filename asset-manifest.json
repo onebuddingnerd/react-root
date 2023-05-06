@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/anupam/static/css/main.40534326.css",
-    "main.js": "/anupam/static/js/main.744fd8a1.js",
-    "static/js/787.a4dad81d.chunk.js": "/anupam/static/js/787.a4dad81d.chunk.js",
-    "pdf.worker.js": "/anupam/9771ba6f4aa0699bc7388926e7ab5e4b.js",
-    "static/media/possibleprofile_nocrop.jpeg": "/anupam/static/media/possibleprofile_nocrop.88df1209f40e57c01935.jpeg",
-    "static/media/MaterialIcons-Regular.eot": "/anupam/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
-    "static/media/MaterialIcons-Regular.ttf": "/anupam/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
-    "static/media/MaterialIcons-Regular.woff": "/anupam/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
-    "static/media/CV_online.pdf": "/anupam/static/media/CV_online.7b1b09294584e4d8659e.pdf",
-    "static/media/MaterialIcons-Regular.woff2": "/anupam/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
-    "static/media/logo.svg": "/anupam/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/anupam/index.html",
-    "main.40534326.css.map": "/anupam/static/css/main.40534326.css.map",
-    "main.744fd8a1.js.map": "/anupam/static/js/main.744fd8a1.js.map",
-    "787.a4dad81d.chunk.js.map": "/anupam/static/js/787.a4dad81d.chunk.js.map"
+    "main.css": "/anupam-portfolio/static/css/main.13325644.css",
+    "main.js": "/anupam-portfolio/static/js/main.314a1ec7.js",
+    "static/js/787.a4dad81d.chunk.js": "/anupam-portfolio/static/js/787.a4dad81d.chunk.js",
+    "pdf.worker.js": "/anupam-portfolio/9771ba6f4aa0699bc7388926e7ab5e4b.js",
+    "static/media/possibleprofile_nocrop.jpeg": "/anupam-portfolio/static/media/possibleprofile_nocrop.88df1209f40e57c01935.jpeg",
+    "static/media/MaterialIcons-Regular.eot": "/anupam-portfolio/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
+    "static/media/MaterialIcons-Regular.ttf": "/anupam-portfolio/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
+    "static/media/MaterialIcons-Regular.woff": "/anupam-portfolio/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
+    "static/media/CV_online.pdf": "/anupam-portfolio/static/media/CV_online.7b1b09294584e4d8659e.pdf",
+    "static/media/MaterialIcons-Regular.woff2": "/anupam-portfolio/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
+    "static/media/logo.svg": "/anupam-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/anupam-portfolio/index.html",
+    "main.13325644.css.map": "/anupam-portfolio/static/css/main.13325644.css.map",
+    "main.314a1ec7.js.map": "/anupam-portfolio/static/js/main.314a1ec7.js.map",
+    "787.a4dad81d.chunk.js.map": "/anupam-portfolio/static/js/787.a4dad81d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40534326.css",
-    "static/js/main.744fd8a1.js"
+    "static/css/main.13325644.css",
+    "static/js/main.314a1ec7.js"
   ]
 }

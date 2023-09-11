@@ -36,6 +36,12 @@ export default class ClassDescDiv extends React.Component {
         DescriptionToggleIcon: '▼',
         ProjectToggleIcon: '▲'
     }
+
+    /* 
+
+    where I mainly develop, compose DevOps assets for, and contribute to release-readying of the Cloud CLI (and its accompanying SDK for plug-ins); recent work has also included development in the "Projects" section of the Cloud platform--spanning a wide range of the service's stack, from the API's data transmission behavior to the web UI rendering logic--intended to streamline customers' resource provisioning and infrastructure management experiences.
+    
+    */
     
     toggleDescription = () => {
         // console.log('hi from toggler')

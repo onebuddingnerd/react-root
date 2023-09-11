@@ -4,6 +4,7 @@ import './App.css';
 import cv_ico from "./imgdata/cv-material.png"
 import home_ico from "./imgdata/home-material.png"
 import github_ico from "./imgdata/github-material.png"
+import linkedin_ico from './imgdata/linkedin_icon.png';
 import myphoto from "./imgdata/possibleprofile_nocrop.jpeg"
 // import { Divider } from 'rsuite';
 
@@ -68,19 +69,19 @@ function App() {
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12">
               <div width="50vw">
+                
                 <br/>
                 <p> <b><i> Intro: </i></b>  My name is Anupam "Anup" Pokharel. I like learning about and building technology that innovatively inspires or enables its users to be creative, productive, or entertained.  </p>
 
                 <p> <b><i> Education: </i></b> I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University.</p>
 
-                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I mainly develop and contribute to release preparation for the company's <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> and its accompanying <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a>. </p>
-
-                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> </p>
-                <ul> 
-                  <li> Playing table tennis xor hiking -- kinda alternates in phase </li>
-                  <li> Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech </li>
-                  <li> Dancing and choreographing </li>
-                </ul> 
+                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> (and its <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a> for plug-ins). I have also recently been prototyping APIs for and helping develop a new section of the Cloud platform (my tasks have touched on a wide range of the involved service stacks, from deciding back-end data exposure to coding the web UI) intended to streamline customers' resource provisioning and infrastructure management experiences. </p>
+                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <br/>
+                  - Playing table tennis xor hiking -- kinda alternates in phase <br/>
+                  - Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech <br/>
+                  - Dancing and choreographing 
+                </p>
+                
               </div>
             </div>
           </div>
@@ -181,9 +182,9 @@ function App() {
         <center>
         <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} />  
         <h2>
-          <a href="https://onebuddingnerd.github.io/react-root"><img src={home_ico} style={{width:"auto"}} /></a> 
-          <a href={require("./filesdata/CV_online.pdf")}> <img src={cv_ico} style={{width:"auto"}} /></a> 
-          <a href="https://github.com/onebuddingnerd"><img src={github_ico} style={{width:"auto"}} /></a> 
+          <a href="https://www.linkedin.com/in/anupam-pokharel-onebuddingnerd/"><img src={linkedin_ico} style={{width:"48px"}} /></a> 
+          <a href={require("./CV_online.pdf")}> <img src={cv_ico} style={{width:"48px"}} /></a> 
+          <a href="https://github.com/onebuddingnerd"><img src={github_ico} style={{width:"48px"}} /></a> 
         </h2>
         </center>
       

@@ -2,21 +2,17 @@ import logo from './logo.svg';
 import './App.css'; 
 
 import cv_ico from "./imgdata/cv-material.png"
-import home_ico from "./imgdata/home-material.png"
 import github_ico from "./imgdata/github-material.png"
 import linkedin_ico from './imgdata/linkedin_icon.png';
-import myphoto from "./imgdata/possibleprofile_nocrop.jpeg"
-// import { Divider } from 'rsuite';
-
-import ClassDescDiv from './ClassDescDiv';
-import ClassDesc from './ClassDesc'
-import ProjectDescDiv from './ProjectDescDiv'
-
+import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
+import ClassDesc from './ClassDesc';
 import CardDiv from './CardDiv'
-import { textAlign } from '@mui/system';
 
 import PDFPane from './PDFPane';
-
+import MediaCardForCourse from './MuiCardDiv';
+import internet_ico from './imgdata/wallpaper-15441-card.jpeg'
+import dsalgo_ico from './imgdata/icon-15210-card.jpeg'
+import nnet_ico from './imgdata/icon-10301-card.jpeg'
 
 
 function App() {
@@ -77,9 +73,9 @@ function App() {
 
                 <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> (and its <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a> for plug-ins). I have also recently been prototyping APIs for and helping develop a new section of the Cloud platform (my tasks have touched on a wide range of the involved service stacks, from deciding back-end data exposure to coding the web UI) intended to streamline customers' resource provisioning and infrastructure management experiences. </p>
                 <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <br/>
-                  - Playing table tennis xor hiking -- kinda alternates in phase <br/>
+                  - Playing table tennis xor hiking -- kinda alternates in phases <br/>
                   - Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech <br/>
-                  - Dancing and choreographing 
+                  - Dancing and listening to music 
                 </p>
                 
               </div>
@@ -149,21 +145,36 @@ function App() {
             <br/>
             <div class="row" height="100%">
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDesc Name="15-441: Networking and the Internet" 
+                {/* <ClassDesc Name="15-441: Networking and the Internet" 
                 Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques." 
-                Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP request handler with a parser, coded nearly from-scratch earlier in the course, to better control the exact pre-/post-conditions surrounding redirections to the proxy." />
+                Project="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP request handler with a parser, coded nearly from-scratch earlier in the course, to better control the exact pre-/post-conditions surrounding redirections to the proxy." /> */}
+                <MediaCardForCourse 
+                  CourseNumber="15-441" CourseTitle="Networking and the Internet" mediaSrc={internet_ico}
+                  Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques."
+                  FaveProject="...was an implementation of an adaptive bitrate proxy functioning as an intermediary for a server delivering video feeds to multiple clients at the highest qualities transmissible without delays, as constrained by real-time calculations of network throughput based on each active connection's round-trip. The project also pre-required use of an HTTP request handler with a parser, coded nearly from-scratch earlier in the course, to better control the exact pre-/post-conditions surrounding redirections to the proxy."
+                />
               </div>
 
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDesc Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
+                {/* <ClassDesc Name="15-210: Parallel and Sequential Data Structures and Algorithms" 
                 Desc={["15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as the course lectures steadfastly uphold the mantra that \"functions are values\" (check out the", <a href='http://www.cs.cmu.edu/~15150/faq.html'> bottom FAQ item</a>, ", xD) and convince students about the conceptual elegance of that central idea."]} 
-                Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image." />
+                Project="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image." /> */}
+                <MediaCardForCourse 
+                  CourseNumber="15-210" CourseTitle="Parallel and Sequential Data Structures and Algorithms" mediaSrc={dsalgo_ico}
+                  Desc={["15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as the course lectures steadfastly uphold the mantra that \"functions are values\" (check out the", <a href='http://www.cs.cmu.edu/~15150/faq.html'> bottom FAQ item</a>, ", xD) and convince students about the conceptual elegance of that central idea."]}
+                  FaveProject="...was the creation of a program that performs &quot;seam-carving&quot; on an input image, enabling unequal downsizing across the vertical and horizontal dimensions with robust preservation of critical features and overall proportionality of pictured subjects/objects. It was fascinating that this process reduced to a traversal-minimization problem (based on the Bellman Ford algorithm) upon representing pixels as individual contributors of &quot;energy&quot;, quantitatively captured by finite-difference estimations of gradients, in an image."
+                />
               </div>
 
               <div class="col-lg-4 col-md-12 col-sm-12">
-                <ClassDesc Name="10-301: Introduction to Machine Learning" 
+                {/* <ClassDesc Name="10-301: Introduction to Machine Learning" 
                 Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
-                Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states." />
+                Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states." /> */}
+                <MediaCardForCourse 
+                  CourseNumber="10-301" CourseTitle="Introduction to Machine Learning" mediaSrc={nnet_ico}
+                  Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
+                  FaveProject="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states."
+                />
               </div>
             </div>
             </div>

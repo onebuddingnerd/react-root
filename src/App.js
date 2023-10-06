@@ -7,6 +7,7 @@ import linkedin_ico from './imgdata/linkedin_icon.png';
 import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
 import ClassDesc from './ClassDesc';
 import CardDiv from './CardDiv'
+import CarouselSlider from "react-carousel-slider";
 
 import PDFPane from './PDFPane';
 import MediaCardForCourse from './MuiCardDiv';
@@ -16,6 +17,70 @@ import nnet_ico from './imgdata/icon-10301-card.jpeg'
 
 
 function App() {
+
+  const projectCarouselItems = [
+    (<div>
+    <CardDiv ProjectName="Parallelization of Inference on Recurrent Neural Networks" 
+      ProjectDesc="Research on implementation decisions that optimally negotiate the competing priorities of speed and accuracy in GPU-accelerated, parallelized speedups of the forward-pass of recurrent neural networks--a process that typically requires purely sequential execution layout for full correctness." 
+              linksContent="Source code (Github), Research showcase (Github Pages)" 
+              flipContent={[<b style={{color:"white"}}>When:</b>, 
+              <p style={{color:"white"}}> • Nov. - Dec. 2021</p>,  
+              <b style={{color:"white"}}>Implemented in:</b>,
+              <p style={{color:"white"}}> • C++, CUDA, Bash, R</p>,
+              <b style={{color:"white"}}>Links:</b>,
+              <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/418_finalproject_code" style={{color: 'purple'}}>Source Code</a> <br/> 
+              • <a href="https://onebuddingnerd.github.io/418-react/" style={{color: 'purple'}}> Research Showcase</a> </p>]}
+    />
+    </div>), 
+    (<div>
+      <CardDiv ProjectName="GGG: Gamified Grocery Guessing" ProjectDesc="A GUI, with support for multiple profiles accessed by face-based authentication, that generates advice on (and offers gesture-based triggering of automated followup actions for) food purchases, informed by outputs from a custom-architected/-hyperparametrized model (a simple 3-layer linear transform) trained on a public dataset of millions of transactions at Aldi."
+                  linksContent="Source code (Github), Technical Summary (Github)"
+                  flipContent={[<b style={{color:"white"}}>When:</b>, 
+                  <p style={{color:"white"}}> • Feb. 2021</p>,  
+                  <b style={{color:"white"}}>Implemented in:</b>,
+                  <p style={{color:"white"}}> • Python, Bash</p>,
+                  <b style={{color:"white"}}>Links:</b>,
+                  <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/coolimagetech" style={{color: 'purple'}}>Source Code</a> <br/> 
+                  • <a href="https://github.com/onebuddingnerd/coolimagetech/blob/main/README.md" style={{color: 'purple'}}> Project Description and Usage</a></p>]}
+      />
+    </div>),
+    (<div>
+    <CardDiv ProjectName="Nutr-EZ Nutrition Aid" ProjectDesc="A webapp catering to students interested in pursuing optimal on-campus venues/offerings for their dietary parameters and fitness goals, featuring adaptive content aiming to best combine profile-specific details, user feedback, and data gathered by a bootstrapped apparatus for querying the college's dining webpages."
+                linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
+                flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
+                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
+    />
+    </div>),
+    (<div >
+    <CardDiv ProjectName="Everything Everywhere All wat Once" ProjectDesc="A webapp tabulating basic business categorization and sentiment information derived from NLP on details of incidents, in addition to providing an expanded menu for curating contents (in the form of modifiable messages topical to a selection of suggested attributes yielded by APIs exposing prompt ingestion and ad-hoc tuning of parameters for the generative models of the watsonx platform) of conversations with customers on a live-chat interface."
+                linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
+                flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
+                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
+    />
+    </div>),
+    (<div >
+    <CardDiv ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting the default OS files on the internal storage with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for users of Android smartphones not manufactured by Google."
+                linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
+                flipContent={[<b style={{color:"white"}}>When:</b>, 
+                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <b style={{color:"white"}}>Implemented in:</b>,
+                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <b style={{color:"white"}}>Links:</b>,
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
+                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
+    />
+    </div>)
+  ];
   
   return (
     
@@ -91,7 +156,11 @@ function App() {
 
         <div class="scrollContainer" style={{"height": "100%"}}>
             
-            <div class = "container" style={{"height": "100%"}}>
+            <CarouselSlider 
+              slideCpnts={projectCarouselItems}
+            />
+
+            {/* <div class = "container" style={{"height": "100%"}}>
             <div class="row" height="100%">
               <div class="col-lg-4 col-md-12 col-sm-12">
                 <CardDiv ProjectName="Parallelization of Inference on Recurrent Neural Networks" 
@@ -131,7 +200,12 @@ function App() {
                 / >
               </div>
               </div>
-            </div>
+            </div> */}
+        
+            <CarouselSlider 
+
+            />
+
         </div>
 
         <br/>

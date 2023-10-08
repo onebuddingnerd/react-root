@@ -7,7 +7,9 @@ import linkedin_ico from './imgdata/linkedin_icon.png';
 import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
 import ClassDesc from './ClassDesc';
 import CardDiv from './CardDiv'
-import CarouselSlider from "react-carousel-slider";
+// import CarouselSlider from "react-carousel-slider";
+import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
 
 import PDFPane from './PDFPane';
 import MediaCardForCourse from './MuiCardDiv';
@@ -57,30 +59,48 @@ function App() {
     />
     </div>),
     (<div >
-    <CardDiv ProjectName="Everything Everywhere All wat Once" ProjectDesc="A webapp tabulating basic business categorization and sentiment information derived from NLP on details of incidents, in addition to providing an expanded menu for curating contents (in the form of modifiable messages topical to a selection of suggested attributes yielded by APIs exposing prompt ingestion and ad-hoc tuning of parameters for the generative models of the watsonx platform) of conversations with customers on a live-chat interface."
+    <CardDiv ProjectName="Everything Everywhere All wat Once" ProjectDesc="A webapp tabulating basic business categorization and sentiment information on details of incidents, in addition to providing an expanded menu containing a live-chat interface with editable message selections produced by generative models (invoked in real-time with ad-hoc tuning options and prompt ingestion available through APIs) on IBMs watsonx platform"
                 linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
                 flipContent={[<b style={{color:"white"}}>When:</b>, 
-                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <p style={{color:"white"}}> • Aug. 2023</p>,  
                       <b style={{color:"white"}}>Implemented in:</b>,
-                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <p style={{color:"white"}}> • Python (data-handling), Golang (invoking Watson APIs through a custom middleware layer)</p>,
+                      <p style={{color:"white"}}> • React.js (front-end)</p>,
                       <b style={{color:"white"}}>Links:</b>,
-                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
-                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
+                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Project Video</a> </p>]}
     />
     </div>),
     (<div >
     <CardDiv ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting the default OS files on the internal storage with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for users of Android smartphones not manufactured by Google."
                 linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
                 flipContent={[<b style={{color:"white"}}>When:</b>, 
-                      <p style={{color:"white"}}> • Sept. 2020</p>,  
+                      <p style={{color:"white"}}> • Jun. 2020</p>,  
                       <b style={{color:"white"}}>Implemented in:</b>,
-                      <p style={{color:"white"}}> • Python (back-end + analytics), HTML/CSS (front-end)</p>,
+                      <p style={{color:"white"}}> • Text editor and iMovie ☺ </p>,
                       <b style={{color:"white"}}>Links:</b>,
-                      <p style={{color:"white"}}> • <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color: 'purple'}}>Source Code</a>  <br/> 
-                      • <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color: 'purple'}}> Project Demo (Devpost)</a> </p>]}
+                      <p style={{color:"white"}}> • <a href="https://www.youtube.com/watch?v=QBssO73E1LI" style={{color: 'purple'}}> Video </a> <br/> 
+                      • <a href="https://drive.google.com/file/d/1lIRUpUrC35QE2A7MI9nK-N1MspzZ0td6/view" style={{color: 'purple'}}> Written Instructions (Devpost)</a> </p>]}
     />
     </div>)
   ];
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  };
   
   return (
     
@@ -136,7 +156,7 @@ function App() {
 
                 <p> <b><i> Education: </i></b> I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University.</p>
 
-                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> (and its <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a> for plug-ins). I have also recently been prototyping APIs for and helping develop a new section of the Cloud platform (my tasks have touched on a wide range of the involved service stacks, from deciding back-end data exposure to coding the web UI) intended to streamline customers' resource provisioning and infrastructure management experiences. </p>
+                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> (and its <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a> for plug-ins). My responsibilities have expanded to a key development role in a recent initiative at IBM to streamline customers' experiences in resource provisioning and infrastructure management within the "IBM Cloud Projects" product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling providing middleware for versatile interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). </p>
                 <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <br/>
                   - Playing table tennis xor hiking -- kinda alternates in phases <br/>
                   - Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech <br/>
@@ -156,9 +176,32 @@ function App() {
 
         <div class="scrollContainer" style={{"height": "100%"}}>
             
-            <CarouselSlider 
+            {/* <CarouselSlider 
               slideCpnts={projectCarouselItems}
-            />
+            /> */}
+
+            <Carousel
+              swipeable={false}
+              draggable={false}
+              showDots={true}
+              responsive={responsive}
+              ssr={true} // means to render carousel on server-side.
+              infinite={false}
+              autoPlaySpeed={1000}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+              containerClass="carousel-container"
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding-40-px"
+              >
+            {projectCarouselItems.map((item) => 
+              <div>
+                {item}
+              </div>
+            )}
+            </Carousel>
 
             {/* <div class = "container" style={{"height": "100%"}}>
             <div class="row" height="100%">
@@ -201,10 +244,6 @@ function App() {
               </div>
               </div>
             </div> */}
-        
-            <CarouselSlider 
-
-            />
 
         </div>
 

@@ -17,6 +17,20 @@ import internet_ico from './imgdata/wallpaper-15441-card.jpeg'
 import dsalgo_ico from './imgdata/icon-15210-card.jpeg'
 import nnet_ico from './imgdata/icon-10301-card.jpeg'
 
+import BasicAccordion from './MuiAccordion';
+
+
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+import BasicModal from './MuiModal';
+
+
 
 function App() {
 
@@ -79,7 +93,7 @@ function App() {
                       <p style={{color:"white"}}> • Text editor and iMovie ☺ </p>,
                       <b style={{color:"white"}}>Links:</b>,
                       <p style={{color:"white"}}> • <a href="https://www.youtube.com/watch?v=QBssO73E1LI" style={{color: 'purple'}}> Video </a> <br/> 
-                      • <a href="https://drive.google.com/file/d/1lIRUpUrC35QE2A7MI9nK-N1MspzZ0td6/view" style={{color: 'purple'}}> Written Instructions (Devpost)</a> </p>]}
+                      • <a href="https://drive.google.com/file/d/1lIRUpUrC35QE2A7MI9nK-N1MspzZ0td6/view" style={{color: 'purple'}}> Written Instructions </a> </p>]}
     />
     </div>)
   ];
@@ -152,16 +166,29 @@ function App() {
               <div width="50vw">
                 
                 <br/>
-                <p> <b><i> Intro: </i></b>  My name is Anupam "Anup" Pokharel. I like learning about and building technology that innovatively inspires or enables its users to be creative, productive, or entertained.  </p>
+                <BasicAccordion heading="Intro" 
+                  content="My name is Anupam &quot;Anup&quot; Pokharel. I like learning about and building technology that innovatively inspires or enables its users to be creative, productive, or entertained."
+                /> <br/>
 
-                <p> <b><i> Education: </i></b> I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University.</p>
+                <BasicAccordion heading="Education" 
+                  content="I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University."
+                /> <br/>
 
-                <p> <b><i> Work: </i></b> Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a> (and its <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a> for plug-ins). My responsibilities have expanded to a key development role in a recent initiative at IBM to streamline customers' experiences in resource provisioning and infrastructure management within the "IBM Cloud Projects" product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling providing middleware for versatile interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). </p>
-                <p> <b> <i> A Few of My Non-Vocational Interests: </i> </b> <br/>
-                  - Playing table tennis xor hiking -- kinda alternates in phases <br/>
-                  - Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech <br/>
-                  - Dancing and listening to music 
-                </p>
+                <BasicAccordion heading="Work" 
+                  content={[
+                    "Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the ",
+                    <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a>,
+                    " (and its ",
+                    <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a>,
+                    " for plug-ins). My responsibilities have expanded to a key development role in a recent initiative at IBM to streamline customers' experiences in resource provisioning and infrastructure management within the &quot;IBM Cloud Projects&quot; product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling serving as middleware for interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). ",
+                  ]}
+                /> <br/>
+
+                <BasicAccordion heading="A Few of my Non-Vocational Interests:" 
+                  content={
+                    "- Playing table tennis xor hiking -- kinda alternates in phases\n- Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech\n- Dancing and listening to music"
+                  }
+                /> <br/>
                 
               </div>
             </div>
@@ -171,6 +198,7 @@ function App() {
         <br/>
         <center> <hr width="90%" height='1px' border='1px' style={{'background-color': 'black'}} ></hr> </center>
         <h3> <center> Some recent projects </center> </h3>
+        <center><h5>A handful of solo and team-based endeavors:</h5> </center>
         <br></br>
         
 
@@ -283,11 +311,13 @@ function App() {
                 {/* <ClassDesc Name="10-301: Introduction to Machine Learning" 
                 Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
                 Project="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states." /> */}
+
                 <MediaCardForCourse 
                   CourseNumber="10-301" CourseTitle="Introduction to Machine Learning" mediaSrc={nnet_ico}
                   Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 
                   FaveProject="...required me to execute Viterbi decoding to travel in the reverse direction of most prediction tasks (namely, generating guessed inputs given values of later computation stages of a model with hidden states) by way of accumulative max. likelihood estimation--which I had learned about in prior classes--operations. Additionally, I intellectually enjoyed the chances to apply lessons from 15-210's unit on dynamic programming, when devising a subproblem structure in the logic that resolved the likeliest sequence of hidden states."
                 />
+                
               </div>
             </div>
             </div>

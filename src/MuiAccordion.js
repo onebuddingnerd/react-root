@@ -6,10 +6,11 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function BasicAccordion(props) {
-  const {heading, content} = props;
+  const {heading, content, startsExpanded} = props;
+
   return (
-    <div>
-      <Accordion>
+    <div style={{width: "100%", paddingLeft: "5%", paddingRight: "5%"}}>
+      <Accordion defaultExpanded={startsExpanded}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

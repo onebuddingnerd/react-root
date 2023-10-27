@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css'; 
 
 import cv_ico from "./imgdata/cv-material.png"
 import github_ico from "./imgdata/github-material.png"
 import linkedin_ico from './imgdata/linkedin_icon.png';
-import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
-import ClassDesc from './ClassDesc';
+// import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
+import myphoto23 from "./imgdata/profile-portfolio-candidate.jpeg";
 import CardDiv from './CardDiv'
 // import CarouselSlider from "react-carousel-slider";
 import Carousel from "react-multi-carousel";
@@ -19,9 +18,14 @@ import nnet_ico from './imgdata/icon-10301-card.jpeg'
 
 import BasicAccordion from './MuiAccordion';
 
-
 import * as React from 'react';
 import BasicTabs from './TabLayout';
+import SplashCard from './SplashCard';
+
+import { TypeAnimation } from 'react-type-animation';
+
+// import React, { useState } from "react";
+// import Toggle from "react-toggle";
 
 function App() {
 
@@ -76,7 +80,7 @@ function App() {
     />
     </div>),
     (<div >
-    <CardDiv ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting the default OS files on the internal storage with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for users of Android smartphones not manufactured by Google."
+    <CardDiv ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting OS files with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for use with Android smartphones not manufactured by Google."
                 linksContent="Source code (Github), Submission Exhibition for HackCMU (Devpost)" 
                 flipContent={[<b style={{color:"white"}}>When:</b>, 
                       <p style={{color:"white"}}> • Jun. 2020</p>,  
@@ -162,8 +166,6 @@ function App() {
   const aboutTabContentDiv = mkBootStrappedAdaptableDiv(
       <>
         
-        <h3> <center> Hi, I'm Anup! </center> </h3>
-        
         <div class="container" height="100%">
           <div class="row" height="100%">
             <div class="col-lg-4 col-md-12 col-sm-12">
@@ -171,7 +173,7 @@ function App() {
                 <div class="d-flex align-items-center" style={{"min-height": "100%"}}>
                   <div class="col-md-12">
                     <center>
-                    <img src={myphoto} class="img-responsive center-block"/>
+                    <img src={myphoto23} class="img-responsive center-block"/>
                     </center>
                   
                 </div>
@@ -180,39 +182,37 @@ function App() {
               
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12">
-              <div width="50vw">
-                
-                <br/>
-                <BasicAccordion heading="Intro" 
-                  content="My name is Anupam &quot;Anup&quot; Pokharel. I like learning about and building technology that innovatively inspires or enables its users to be creative, productive, or entertained."
-                  startsExpanded={true}
-                /> <br/>
-
-                <BasicAccordion heading="Education"
+              <br />
+              <br />
+              <TypeAnimation 
+                sequence={["Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively inspires or enables its users to be creative", 1000, 
+                "Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively inspires or enables its users to be productive", 1000, 
+                "Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively inspires or enables its users to be entertained.", 1000]}
+                speed={80}
+                style={{fontSize: 36, textAlign: "center"}}
+                repeat={Infinity}
+              />
+            </div>
+          </div>
+          <br />
+          <SplashCard heading="Education"
                   content="I earned a B.S. in Statistics &#38; Machine Learning in December 2021 from Carnegie Mellon University."
-                  startsExpanded={false}
                 /> <br/>
-
-                <BasicAccordion heading="Work" 
+          <SplashCard heading="Work" 
                   content={[
                     "Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the ",
                     <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a>,
                     " (and its ",
                     <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a>,
-                    " for plug-ins). My responsibilities have expanded into a key development role in a recent initiative to streamline customers' experiences in resource provisioning and infrastructure management within the &quot;IBM Cloud Projects&quot; product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling serving as middleware for interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). ",
+                    " for plug-ins). My responsibilities have expanded into a key development role in a recent initiative to streamline customers' experiences in resource provisioning and infrastructure management within the \"IBM Cloud Projects\" product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling serving as middleware for interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). ",
                   ]}
                 /> <br/>
 
-                <BasicAccordion heading="A Few of my Non-Vocational Interests:" 
-                  content={
-                    "- Playing table tennis xor hiking -- kinda alternates in phases\n- Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech\n- Dancing and listening to music"
-                  }
-                  startsExpanded={false}
-                /> <br/>
-                
-              </div>
-            </div>
-          </div>
+          <SplashCard heading="A Few of my Non-Vocational Interests:" 
+            content={(
+              <p> - Playing table tennis xor hiking -- kinda alternates in phases <br/> - Reading, usually about financial markets, blockchain (and implementations like DeFi and Web3), neuroscience, nutrition, or new consumer tech <br/> - Dancing and listening to music </p>
+            )}
+          /> <br/>
         </div>
       </>
   );
@@ -220,7 +220,7 @@ function App() {
   const recentProjectsTabContentDiv = mkBootStrappedAdaptableDiv(
     <>
         <h3> <center> Some recent projects </center> </h3>
-        <center><h5>A handful of solo and team-based endeavors:</h5> </center>
+        <center><h5>A handful of endeavors, done solo and as a team:</h5> </center>
         <br></br>
         
 
@@ -304,11 +304,13 @@ function App() {
       //   {courseDescriptionContentDiv}
       //   {cvAndQuicklinksContentDiv}
       // </>
-      <BasicTabs 
-        childJSX={[
-          aboutTabContentDiv, recentProjectsTabContentDiv, courseDescriptionContentDiv
-        ]}
-      />
+      <div class="App">
+        <BasicTabs
+          childJSX={[
+            aboutTabContentDiv, recentProjectsTabContentDiv, courseDescriptionContentDiv
+          ]}
+        />
+      </div>
     )
 
 }

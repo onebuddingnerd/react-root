@@ -4,7 +4,17 @@
 @import "react-pdf/dist/esm/Page/TextLayer.css";
 
 .App {
-  text-align: center;
+  background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%);
+  color: antiquewhite;
+}
+
+.RootTab {
+  background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%);
+  color: antiquewhite;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .App-logo {

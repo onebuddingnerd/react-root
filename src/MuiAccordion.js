@@ -4,22 +4,23 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { fontSize } from '@mui/system';
 
 export default function BasicAccordion(props) {
   const {heading, content, startsExpanded} = props;
 
   return (
-    <div style={{width: "100%", paddingLeft: "5%", paddingRight: "5%"}}>
+    <div class="RootTab" style={{width: "100%", paddingLeft: "5%", paddingRight: "5%"}}>
       <Accordion defaultExpanded={startsExpanded}>
-        <AccordionSummary
+        <AccordionSummary class="RootTab"
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography> <b> {heading} </b></Typography>
+          <Typography style={{fontSize: 24}}> <b> {heading} </b></Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
+        <AccordionDetails class="RootTab">
+          <Typography style={{fontSize: 20}}>
             {content}
           </Typography>
         </AccordionDetails>

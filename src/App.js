@@ -4,7 +4,7 @@ import cv_ico from "./imgdata/cv-material.png"
 import github_ico from "./imgdata/github-material.png"
 import linkedin_ico from './imgdata/linkedin_icon.png';
 // import myphoto from "./imgdata/possibleprofile_nocrop.jpeg";
-import myphoto23 from "./imgdata/profile-portfolio-candidate.jpeg";
+import myphoto23 from "./imgdata/profile-portfolio-candidate-transformed.png";
 import CardDiv from './CardDiv'
 // import CarouselSlider from "react-carousel-slider";
 import Carousel from "react-multi-carousel";
@@ -168,7 +168,7 @@ function App() {
         
         <div class="container" height="100%">
           <div class="row" height="100%">
-            <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="col-lg-3 col-md-12 col-sm-12">
             
                 <div class="d-flex align-items-center" style={{"min-height": "100%"}}>
                   <div class="col-md-12">
@@ -182,8 +182,6 @@ function App() {
               
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12">
-              <br />
-              <br />
               <TypeAnimation 
                 sequence={["Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively inspires or enables its users to be creative", 1000, 
                 "Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively inspires or enables its users to be productive", 1000, 
@@ -204,7 +202,7 @@ function App() {
                     <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a>,
                     " (and its ",
                     <a href='https://github.com/IBM-Cloud/ibm-cloud-cli-sdk'>SDK</a>,
-                    " for plug-ins). My responsibilities have expanded into a key development role in a recent initiative to streamline customers' experiences in resource provisioning and infrastructure management within the \"IBM Cloud Projects\" product offering, and my tasks have touched on a wide range of the involved service stacks (from tooling serving as middleware for interfacing with newly-unveiled APIs, to front-end coding for webpages hosting the UI for upcoming product features). ",
+                    " for plug-ins). My responsibilities have expanded into a key development role in a recent initiative to streamline customers' experiences in resource provisioning and infrastructure management within the \"IBM Cloud Projects\" product offering, and my tasks have touched on a wide range of the involved service stacks: making middleware tooling to facilitate interfacing with newly-unviled APIs, front-end coding of webpages revised through several cycles of design feedback and internal testing, and contributing to the deployments in  pre-production computing environments ahead of the rollout to customers.",
                   ]}
                 /> <br/>
 

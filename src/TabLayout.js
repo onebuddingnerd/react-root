@@ -2,6 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+
+import InfoIcon from '@mui/icons-material/Info';
+
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
@@ -49,9 +52,14 @@ export default function BasicTabs(props) {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label={<h5>About</h5>} {...a11yProps(0)} />
+      <Box sx={{ borderBottom: 0, borderColor: 'divider' }}>
+        <Tabs style={{paddingLeft: '10%'}} value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab label={
+                <div style={{display: 'flex', flexFlow: 'row'}}>
+                    <InfoIcon />
+                    <h5>&#160; About</h5>
+                </div>} 
+                {...a11yProps(0)} />
           <Tab label={<h5>Projects</h5>} {...a11yProps(1)} />
           <Tab label={<h5>Coursework</h5>} {...a11yProps(2)} />
         </Tabs>

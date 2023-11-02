@@ -26,5 +26,5 @@ export default function BasicAccordion(props) {
         </AccordionDetails>
       </Accordion>
     </div>
-  );f
+  );
 }

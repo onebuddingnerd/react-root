@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import './Card.css'
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import React, {useState} from "react";
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
 
 export default function SplashCard(props) {
 
@@ -10,13 +11,13 @@ export default function SplashCard(props) {
 
     return (
       <div class="RootTab">
-        <Card sx={{ minWidth: 275 }} class="RootTab">
-            <CardContent class="RootTab">
-                <Typography variant="h5" component="div">
+        <Card sx={{ minWidth: 275 }} class="RootTab" >
+            <CardContent class="RootTab" >
+                <Typography level="h3" variant="h5" component="div" style={{color: 'white'}}>
                 {heading}
                 </Typography>
                 <br />
-                <Typography variant="body1">
+                <Typography level="body-lg" variant="body1" style={{color: 'white'}}>
                 {content}
                 <br />
                 </Typography>

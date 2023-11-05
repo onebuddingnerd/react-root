@@ -1,6 +1,8 @@
 
 .MuiCard-root {
-    background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%);
+    /* background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%); */
+    background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
     color: white;
     border-color: none;
 }

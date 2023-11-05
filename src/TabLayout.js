@@ -53,25 +53,32 @@ export default function BasicTabs(props) {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 0, borderColor: 'divider' }}>
-        <Tabs style={{paddingLeft: '10%'}} value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label={
+        <Tabs textColor='white' style={{paddingLeft: '10%'}} value={value} onChange={handleChange} aria-label="primary content splitter">
+          {/* <Tab label={
                 <div style={{display: 'flex', flexFlow: 'row'}}>
                     <InfoIcon />
                     <h5>&#160; About</h5>
                 </div>} 
-                {...a11yProps(0)} />
+                {...a11yProps(0)} /> */}
+          <Tab label={<h5>About</h5>} />
           <Tab label={<h5>Projects</h5>} {...a11yProps(1)} />
-          <Tab label={<h5>Coursework</h5>} {...a11yProps(2)} />
+          <Tab label={<h5>Coursework + CV</h5>} {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        {childJSX[0]}
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          {childJSX[0]}
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        {childJSX[1]}
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          {childJSX[1]}
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        {childJSX[2]}
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          {childJSX[2]}
+        </div>
       </CustomTabPanel>
     </Box>
   );

@@ -4,12 +4,18 @@
 @import "react-pdf/dist/esm/Page/TextLayer.css";
 
 .App {
-  background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%);
+  /* background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%); */
+  background-color: #4d4855;
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
   color: antiquewhite;
+  display: flex;
+  justify-content: center;
 }
 
 .RootTab {
-  background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%);
+  /* background: radial-gradient(circle at 10% 20%, rgb(34, 102, 138) 0%, rgb(154, 118, 255) 80.6%); */
+  background-color: #4d4855;
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
   color: antiquewhite;
   padding-left: 10px;
   padding-right: 10px;

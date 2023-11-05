@@ -17,13 +17,13 @@ export default function AccordCourseCard (props) {
         <Card>
              <Typography level="h3" variant="h5" component="div" style={{color: 'white'}}> {CourseName} </Typography>
             <CardContent>
-                <Accordion defaultExpanded={false} className="RootTab">
+                <Accordion defaultExpanded={false} style={{backgroundColor: 'inherit'}}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{color: 'white'}}/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <Typography level="h4" variant="h5" component="div" style={{color: 'white'}}>
+                    <Typography level="h4" variant="h6" component="div" style={{color: 'white'}}>
                         Why I liked it
                     </Typography>
                     </AccordionSummary>
@@ -33,13 +33,13 @@ export default function AccordCourseCard (props) {
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion defaultExpanded={true} className="RootTab">
+                <Accordion defaultExpanded={true} style={{backgroundColor: 'inherit'}}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{color: 'white'}}/>}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography level="h4" variant="h5" component="div" style={{color: 'white'}}>
+                    <Typography level="h4" variant="h6" component="div" style={{color: 'white'}}>
                         My favorite course project ... 
                     </Typography>
                     </AccordionSummary>

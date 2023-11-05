@@ -226,7 +226,7 @@ function App() {
           <div class="container" style={{"height": "100%", maxWidth: '850px'}}>
             <br/>
             <div class="row" height="100%">
-              <div class="col-lg-12 col-md-12 col-sm-12" style={{paddingBottom: '20px'}}>
+              <div style={{paddingBottom: '20px'}}>
                 <AccordCourseCard 
                   CourseNumber="15-441" CourseTitle="Networking and the Internet"
                   Desc="15-441 provided a thorough inquiry into the underpinnings of the internet. Course content started with foundational principles of robust and interoperable connectivity among dispersed endpoints, to contextualize algorithmic thinking within internet design paradigms like distance-vector routing, and then delved into the inner workings of each layer of the OSI model. The course's projects markedly leveled-up my skillset in highly intensive analysis at very low-levels of programs' control flows: they routinely entailed replicating and precisely altering large components of flagship protocols of the industry's state-of-the-art, like TCP, to deliver operational behavior meeting desirable network attributes (end-to-end correctness, congestion control, etc.). I particularly enjoyed that my prior learning of computer systems topics like multithreading, mutual exclusion, and lean memory management were maximally utilized in projects where correctness depended on well-reasoned and meticulous application of the relevant techniques."
@@ -234,7 +234,7 @@ function App() {
                 />
               </div>
 
-              <div class="col-lg-12 col-md-12 col-sm-12" style={{paddingBottom: '20px'}}>
+              <div style={{paddingBottom: '20px'}}>
                 <AccordCourseCard 
                   CourseNumber="15-210" CourseTitle="Parallel and Sequential Data Structures and Algorithms"
                   Desc={["15-210's curriculum centered around in-depth analysis of computation tasks such as graph pathing optimization for opportunities to upgrade performance by parallel speedup (and the practical tradeoffs in overhead incurred in its pursuit). I learned a wide variety of algorithmic intuitions for achieving--and rigorously proving the mathematical soundness of--the best complexity class of implementation runtime (and ancillary work, e.g. optimal data-collating/-retrieval), for many frequently-encountered flavors of logical problems. This was also the highest-level course I took that had its programming exclusively in SML/NJ, a functional programming language that I developed an unexpected penchant for in this course's pre-requisite: but my experience as a doubter-turned-enthusiast is far from unique, as the course lectures steadfastly uphold the mantra that \"functions are values\" (check out the", <a href='http://www.cs.cmu.edu/~15150/faq.html'> bottom FAQ item</a>, ", xD) and convince students about the conceptual elegance of that central idea."]}
@@ -242,7 +242,7 @@ function App() {
                 />
               </div>
 
-              <div class="col-lg-12 col-md-12 col-sm-12" style={{paddingBottom: '20px'}}>
+              <div style={{paddingBottom: '20px'}}>
                 <AccordCourseCard 
                   CourseNumber="10-301" CourseTitle="Introduction to Machine Learning"
                   Desc="10-301 explored the flourishing research occurring at the intersection of statistical inference and computer science, starting with mechanistic teachings on basic classifiers such as the perceptron to lead to intuitions and concepts that are required for a technically-informed understanding of complex neural networks (and how to optimize implementations for compute-efficiency). It was very fulfilling to observe my caliber of grasp on the subject increase to ably keep up with the course material once it transitioned, towards the end, to more sophisticated gradient descent for high-dimensionality data and even emergent topics like model-free reinforcement learning. Additionally, because the course doubled as an offering in the graduate-level machine learning department, I interacted as a study-buddy with many more people than in other courses and, in doing so, enhanced my appreciation for the diversity of curiosities, approach angles, and explanation strategies that can be precursors to overcoming conceptual hurdles." 

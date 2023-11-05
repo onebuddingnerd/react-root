@@ -1,8 +1,5 @@
 import './App.css'; 
 
-import cv_ico from "./imgdata/cv-material.png"
-import github_ico from "./imgdata/github-material.png"
-import linkedin_ico from './imgdata/linkedin_icon.png';
 import myphoto23 from "./imgdata/me-profile-23.png";
 import eeawo_photo from "./imgdata/eeawo-thumbnail-1.png"
 import pe_photo from "./imgdata/pe-thumbnail-1.png"
@@ -68,7 +65,7 @@ function App() {
     </div>),
     (<div >
      <FliplessCard ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting OS files with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for use with Android smartphones not manufactured by Google."
-                  ProjectSubtitle="Jun. 2020 • Text editor and iMovie ☺"
+                  ProjectSubtitle="Jun. 2020 • Text and iMovie ☺"
                   ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
                   <NoteAltIcon /> &#160; <a href="https://drive.google.com/file/d/1lIRUpUrC35QE2A7MI9nK-N1MspzZ0td6/view" style={{color:'white'}}> Written Instructions</a> &#160;•&#160; <SlideshowIcon /> &#160; <a href="https://www.youtube.com/watch?v=QBssO73E1LI" style={{color:'white'}}> Video Guide</a> </div>}
                   ProjectImg={<img src={pe_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
@@ -187,7 +184,7 @@ function App() {
           </div>
           <br />
           <SplashCard
-            heading="Quick Autobio, v1.0.0"
+            heading="Quick Autobio"
             content={[
               "My upbringing was set in a valley of the New River in southwest Virginia (with a few summer months spent in my parents' hometowns in Nepal), where I lived throughout my primary and secondary schooling. I then moved to Pittsburgh, PA for my undergraduate studies and, in December 2021, earned a B.S. in Statistics & Machine Learning from Carnegie Mellon University.",
               <br/>, <br/>, 

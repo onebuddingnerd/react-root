@@ -60,9 +60,9 @@ export default function BasicTabs(props) {
                     <h5>&#160; About</h5>
                 </div>} 
                 {...a11yProps(0)} /> */}
-          <Tab label={<h5>About</h5>} />
-          <Tab label={<h5>Projects</h5>} {...a11yProps(1)} />
-          <Tab label={<h5>Coursework + CV</h5>} {...a11yProps(2)} />
+          <Tab label={<h5>About</h5>} disableRipple={true} />
+          <Tab label={<h5>Projects</h5>} {...a11yProps(1)} disableRipple={true} />
+          <Tab label={<h5>Coursework + CV</h5>} {...a11yProps(2)} disableRipple={true} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

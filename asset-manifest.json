@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-root/static/css/main.3297093e.css",
-    "main.js": "/react-root/static/js/main.44c5fe2a.js",
+    "main.js": "/react-root/static/js/main.9a6df2ce.js",
     "static/js/787.a4dad81d.chunk.js": "/react-root/static/js/787.a4dad81d.chunk.js",
     "pdf.worker.js": "/react-root/c6beb570e1e5e6a7b446434382e1bb01.js",
     "static/media/ggg-thumbnail-1.png": "/react-root/static/media/ggg-thumbnail-1.ab0e9918addd2252cdbf.png",
@@ -20,11 +20,11 @@
     "static/media/revicons.woff": "/react-root/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-root/index.html",
     "main.3297093e.css.map": "/react-root/static/css/main.3297093e.css.map",
-    "main.44c5fe2a.js.map": "/react-root/static/js/main.44c5fe2a.js.map",
+    "main.9a6df2ce.js.map": "/react-root/static/js/main.9a6df2ce.js.map",
     "787.a4dad81d.chunk.js.map": "/react-root/static/js/787.a4dad81d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3297093e.css",
-    "static/js/main.44c5fe2a.js"
+    "static/js/main.9a6df2ce.js"
   ]
 }

@@ -10,6 +10,7 @@
   color: antiquewhite;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .RootTab {
@@ -67,6 +68,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    justify-content: center;
 }
 
 .d-flex-soverflow {
@@ -89,6 +91,10 @@ button.toggle {
 
 img {
   width: min( max(95%, 100px), 275px);
+}
+
+.chamfered_img {
+  border-radius: 5%;
 }
 
 .vertcenterdiv {

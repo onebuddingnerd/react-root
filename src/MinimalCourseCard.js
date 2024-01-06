@@ -13,16 +13,13 @@ export default function MinCourseCard (props) {
                 <Typography level="h3" variant="h5" component="div" style={{color: 'white'}}>
                     {CourseNumber} : {CourseTitle}
                 </Typography>
-                {/* <Typography sx={{fontStyle: 'italic'}} level="body-md" variant="body1" style={{color: 'white'}}>
-                    {ProjectSubtitle}
-                </Typography> */}
-                <Typography level="h4" variant="h5" component="div" style={{color: 'white'}}>
+                <Typography level="h3" variant="h5" component="div" style={{color: 'white'}}>
                     Why I liked it:
                 </Typography>
                 <Typography level="body-lg" variant="body1" style={{color: 'white'}}>
                     {Desc}
                 </Typography>
-                <Typography level="h4" variant="h5" component="div" style={{color: 'white'}}>
+                <Typography level="h3" variant="h5" component="div" style={{color: 'white'}}>
                     My favorite project ...
                 </Typography> 
                 <Typography level="body-lg" variant="body1" style={{color: 'white'}}>

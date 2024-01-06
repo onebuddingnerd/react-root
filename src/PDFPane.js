@@ -6,15 +6,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 export default function PDFPane() {
 
-  return (
-    <div class="container">
-        <div className={"scrollable_cv_div"}>
-        <Document className={"doc_centeralign"} file={CVDoc}>
+  const pdfPaneDiv = (
+        <div class="container" style={{width: 'inherit', justifyContent: 'center', alignContent: 'center'}}>
+          <Document className={"doc_centeralign"} file={CVDoc}>
             <div className={"scrollable_cv_div"}>
-                <Page pageNumber={1} scale={1.35} />
+              <Page pageNumber={1} />
             </div>
-        </Document>
+          </Document>
         </div>
-    </div>
+  );
+
+  return (
+    pdfPaneDiv
   );
 }

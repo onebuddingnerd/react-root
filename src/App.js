@@ -54,7 +54,7 @@ function App() {
     </div>),
     (<div>
      <FliplessCard ProjectName="Nutr-EZ Nutrition Aid" ProjectDesc="A webapp catering to students interested in pursuing optimal on-campus venues/offerings for their dietary parameters and fitness goals, featuring adaptive content aiming to best combine profile-specific details, user feedback, and data gathered by a bootstrapped apparatus for querying the college's dining webpages."
-                  ProjectSubtitle="Sept. 2020 • Python (back-end + analytics), HTML/CSS (front-end)"
+                  ProjectSubtitle="Sept. 2020 • Python3 (back-end + analytics), HTML/CSS (front-end)"
                   ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
                   <CodeIcon /> &#160; <a href="https://github.com/onebuddingnerd/HackCMU20_Final" style={{color:'white', whiteSpace: 'nowrap'}}> Source Code</a> &#160;•&#160; <SlideshowIcon /> &#160; <a href="https://devpost.com/software/nutr-ez-cdgm8p" style={{color:'white'}}> Project Submission</a> </div>}
                   ProjectImg={<img src={nutrez_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
@@ -62,17 +62,17 @@ function App() {
     </div>),
     (<div >
     <FliplessCard ProjectName="Everything Everywhere All wat Once" ProjectDesc="A webapp tabulating basic business categorization and sentiment information on details of customer-affecting incidents, in addition to providing an expanded menu containing a live-chat interface with editable messages and content selections produced by generative models (invoked in real-time with ad-hoc tuning options and prompt ingestion available through APIs) on IBM's watsonx platform."
-                  ProjectSubtitle="Aug. 2023 • Python (data-handling), Golang (middleware for using Watson APIs), React.js (front-end)"
+                  ProjectSubtitle="Aug. 2023 • Python3 (data-handling), Golang (middleware for using Watson APIs), React.js (front-end)"
                   ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
                   <SlideshowIcon /> &#160; <a href="https://drive.google.com/file/d/1yuh9uIq4eHaii8U3bYh-6UsixgOlmw2N/view?usp=sharing" style={{color:'white', whiteSpace: 'nowrap'}}> Project Video</a> </div>}
                   ProjectImg={<img src={eeawo_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
     />
     </div>),
     (<div >
-     <FliplessCard ProjectName="Installing Pixel Software on Non-Pixel Devices" ProjectDesc="A video and written guide on altering the bootloader, installing a flashed recovery program on a temporary partition reversed later in the process, and overwriting OS files with those of a &quot;vanilla&quot; Android developed by community contributors (and distributed as &quot;Pixel Experience&quot;), for use with Android smartphones not manufactured by Google."
-                  ProjectSubtitle="Jun. 2020 • Text editor and iMovie ☺"
+    <FliplessCard ProjectName="Tagging of Resources on IBM Cloud with Projects" ProjectDesc="An expository demonstration of the process for tagging resources provisioned in IBM Cloud with identifiers that associate them with &quot;Projects&quot;, which culminated an effort at IBM in 2023 to bring to the Cloud console new back-end functions to reorganize resources for clearer overviews on their billing and security details."
+                  ProjectSubtitle="Dec. 2023 • React.js (front-end), Node.js and Go (back-end), and Bash and Python3 scripting (DevOps)"
                   ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
-                  <NoteAltIcon /> &#160; <a href="https://drive.google.com/file/d/1lIRUpUrC35QE2A7MI9nK-N1MspzZ0td6/view" style={{color:'white', whiteSpace: 'nowrap'}}> Written Guide</a> &#160;•&#160; <SlideshowIcon /> &#160; <a href="https://www.youtube.com/watch?v=QBssO73E1LI" style={{color:'white'}}> Video </a> </div>}
+                  <SlideshowIcon /> &#160; <a href="https://drive.google.com/file/d/1_cy2Rjcs0l3E5VQNieEsRmAxFTTKZ9H5/view?usp=sharing" style={{color:'white'}}> Video </a> </div>}
                   ProjectImg={<img src={pe_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
     />
     </div>)
@@ -195,7 +195,7 @@ function App() {
           <SplashCard
             heading="About"
             content={[
-              "My upbringing was set in a valley of the New River in southwest Virginia (with a few summer months spent in my parents' hometowns in Nepal), where I lived throughout my primary and secondary schooling. I then moved to Pittsburgh, PA for my undergraduate studies and earned a B.S. in Statistics & Machine Learning from Carnegie Mellon University.",
+              "My upbringing was mostly set in Hokie town in southwest Virginia, where I lived throughout my primary and secondary schooling (save for a few years' summers spent in my parents hometowns in Nepal). I then moved to Pittsburgh, PA for my undergraduate studies and earned a B.S. in Statistics & Machine Learning from Carnegie Mellon University.",
               <br/>, <br/>, 
               "Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the ",
               <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a>,

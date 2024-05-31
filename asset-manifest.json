@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-root/static/css/main.f52bb6d5.css",
-    "main.js": "/react-root/static/js/main.2ea1f21a.js",
+    "main.js": "/react-root/static/js/main.1d296226.js",
     "static/js/787.a4dad81d.chunk.js": "/react-root/static/js/787.a4dad81d.chunk.js",
     "static/media/profile-elliptical.png": "/react-root/static/media/profile-elliptical.7283c3da303532444c5a.png",
     "pdf.worker.js": "/react-root/c6beb570e1e5e6a7b446434382e1bb01.js",
@@ -16,6 +16,7 @@
     "static/media/MaterialIcons-Regular.woff": "/react-root/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
     "static/media/CV_online.pdf": "/react-root/static/media/CV_online.4ab2c0678908ac8f7d20.pdf",
     "static/media/MaterialIcons-Regular.woff2": "/react-root/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
+    "static/media/projects-thumbnail.png": "/react-root/static/media/projects-thumbnail.5558c2165d218ebceb6e.png",
     "static/media/301-proj-pic.png": "/react-root/static/media/301-proj-pic.6c61b83102ca60856b9b.png",
     "static/media/210-proj-pic.png": "/react-root/static/media/210-proj-pic.d7868ced1553293e248b.png",
     "static/media/441-proj-pic.png": "/react-root/static/media/441-proj-pic.b3381dccb95c4459c4d2.png",
@@ -24,11 +25,11 @@
     "static/media/revicons.woff": "/react-root/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-root/index.html",
     "main.f52bb6d5.css.map": "/react-root/static/css/main.f52bb6d5.css.map",
-    "main.2ea1f21a.js.map": "/react-root/static/js/main.2ea1f21a.js.map",
+    "main.1d296226.js.map": "/react-root/static/js/main.1d296226.js.map",
     "787.a4dad81d.chunk.js.map": "/react-root/static/js/787.a4dad81d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f52bb6d5.css",
-    "static/js/main.2ea1f21a.js"
+    "static/js/main.1d296226.js"
   ]
 }

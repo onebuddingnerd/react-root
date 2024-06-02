@@ -3,6 +3,7 @@ import myphoto23 from "./imgdata/me-profile-23.png";
 import myphoto231 from "./imgdata/profile-elliptical.png";
 import eeawo_photo from "./imgdata/eeawo-thumbnail-1.png"
 import pe_photo from "./imgdata/pe-thumbnail-1.png"
+import projects_photo from "./imgdata/projects-thumbnail.png"
 import ggg_photo from "./imgdata/ggg-thumbnail-1.png"
 import pirnn_photo from "./imgdata/pirnn-thumbnail-1.png"
 import nutrez_photo from "./imgdata/nutrez-thumbnail-1.png"
@@ -20,6 +21,7 @@ import PDFPane from './PDFPane';
 import CodeIcon from '@mui/icons-material/Code';
 import SlideshowIcon from '@mui/icons-material/Slideshow';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 
 import BasicAccordion from './MuiAccordion';
 
@@ -71,9 +73,11 @@ function App() {
     (<div >
     <FliplessCard ProjectName="Tagging of Resources on IBM Cloud with Projects" ProjectDesc="An expository demonstration of the process for tagging resources provisioned in IBM Cloud with identifiers that associate them with &quot;Projects&quot;, which culminated an effort at IBM in 2023 to bring to the Cloud console new back-end functions to reorganize resources for clearer overviews on their billing and security details."
                   ProjectSubtitle="Dec. 2023 • React.js (front-end), Node.js and Go (back-end), and Bash and Python3 scripting (DevOps)"
+                  // ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
+                  // <SlideshowIcon /> &#160; <a href="https://drive.google.com/file/d/1_cy2Rjcs0l3E5VQNieEsRmAxFTTKZ9H5/view?usp=sharing" style={{color:'white'}}> Video </a> </div>}
                   ProjectLinks={<div style={{display: 'flex', flexFlow: 'row'}}> 
-                  <SlideshowIcon /> &#160; <a href="https://drive.google.com/file/d/1_cy2Rjcs0l3E5VQNieEsRmAxFTTKZ9H5/view?usp=sharing" style={{color:'white'}}> Video </a> </div>}
-                  ProjectImg={<img src={pe_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
+                  <SlideshowIcon /> &#160; <a href="https://drive.google.com/file/d/1_cy2Rjcs0l3E5VQNieEsRmAxFTTKZ9H5/view?usp=sharing" style={{color:'white', whiteSpace: 'nowrap'}}> Video</a> &#160;•&#160; <NewspaperIcon /> &#160; <a href="https://developer.ibm.com/blogs/awb-resource-management-ibm-cloud-projects/" style={{color:'white'}}> Developer Blog Post</a> </div>}
+                  ProjectImg={<img src={projects_photo} class="img-responsive center-block" style={{maxWidth: '80%', width: '100%', height: 'auto', paddingTop: '10px', paddingBottom: '10px'}}/>}
     />
     </div>)
   ];
@@ -186,7 +190,7 @@ function App() {
                 "Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively enables or inspires its users to be productive", 1000, 
                 "Hi, I'm Anupam \"Anup\" Pokharel! I like learning about and building technology that innovatively enables or inspires its users to be entertained.", 1000]}
                 speed={80}
-                style={{fontSize: 28, fontFamily: 'Roboto, sans-serif', textAlign: "center"}}
+                style={{fontSize: 24, fontFamily: 'Open sans', textAlign: "center"}}
                 repeat={Infinity}
               />
             </div>
@@ -195,7 +199,7 @@ function App() {
           <SplashCard
             heading="About"
             content={[
-              "My upbringing was mostly set in Hokie town in southwest Virginia, where I lived throughout my primary and secondary schooling (save for a few years' summers spent in my parents hometowns in Nepal). I then moved to Pittsburgh, PA for my undergraduate studies and earned a B.S. in Statistics & Machine Learning from Carnegie Mellon University.",
+              "My upbringing was mostly set in Hokie town in southwest Virginia, where I lived throughout my primary and secondary schooling (save for a few years' summers spent in my parents' hometowns in Nepal). I then moved to Pittsburgh, PA for my undergraduate studies and earned a B.S. in Statistics & Machine Learning from Carnegie Mellon University.",
               <br/>, <br/>, 
               "Currently, I work as a full stack software engineer at the Austin, TX location of IBM, where I develop, compose DevOps assets for, and contribute to release-readying of the ",
               <a href='https://www.ibm.com/cloud/cli'>Cloud CLI</a>,
@@ -205,7 +209,7 @@ function App() {
               <a href="https://www.ibm.com/blog/announcement/projects-and-cost-estimation/">Projects</a>, 
               ", and my tasks have touched on a wide range of the involved service stacks: augmenting back-end APIs and making tooling to facilitate use of them in service middleware, building webpages revised through several cycles of design feedback and internal testing, and assisting in some portions of the DevOps (namely, deployments of new images built with my team's codebase to pre-production computing environments) ahead of the rollout to customers.",
               <br/>, <br/>, 
-              "Apart from work, I enjoy playing sports that have sorta unintentionally converged into a mono-thematic format of paddle/racquet-and-ball: table tennis, pickleball, and tennis are all my jams. Hiking is also an activity that I find to be refreshing and fun, but it has taken a back seat to other hobbies; one of the main reasons for that is my budding interest in dancing to music, which I am finding out the hard way is much greater learning curve away from karaoke (another favorite of mine, especially in cars) than I thought. When I'm in the mood for aerobically undemanding downtime, you'll probably find me reading (usually about financial markets, blockchain and its implementations like DeFi and Web3, neuroscience, nutrition, or new consumer tech), trying to build something (legos, choreo steps, or software), or watching a movie or some TV."
+              "Apart from work, I enjoy playing racquet sports: table tennis, pickleball, badminton, and tennis are all my jams. Hiking is also an activity that I find to be refreshing and fun, but it has taken a back seat to other hobbies; one of the main reasons for that is my budding interest in dancing to music, which I am finding out the hard way is much greater learning curve away from karaoke (another favorite of mine, especially in cars) than I thought. When I'm in the mood for aerobically undemanding downtime, you'll probably find me reading (usually about financial markets, blockchain and its implementations like DeFi and Web3, neuroscience, nutrition, or new consumer tech), trying to build something (legos, choreo steps, or software), or watching a movie or some TV."
             ]}
           />
         </div>
@@ -215,7 +219,7 @@ function App() {
   const recentProjectsTabContentDiv = mkBootStrappedAdaptableDiv(
     <>
        <div class="container" height="100%" style={{maxWidth: '850px'}}>
-          <h3> <center> A handful of projects, done solo and as a team </center> </h3>
+          <h3> <center> Notable Projects </center> </h3>
           <br></br>
           
               {projectCarouselItems.map((item) => 
@@ -230,7 +234,7 @@ function App() {
   const courseDescriptionContentDiv = mkBootStrappedAdaptableDiv(
     <>
           <div class="container" height="100%" style={{maxWidth: '850px'}}>
-            <h3> <center> A selection of my most memorable undergraduate coursework </center> </h3>
+            <h3> <center> My favorite courses </center> </h3>
             <br/>
               <div style={{width: '100%%', paddingBottom: '20px'}}>
                 <AccordCourseCard 
